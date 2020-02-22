@@ -255,6 +255,7 @@ abstract class ParentComponent<T> extends Component<T> {
         if (ParentComponent.io === null) {
             ParentComponent.io = socketIo.connect(this.getSocketIoPath(), {
                 path: `${Util.getSubDirectory()}/socket.io`,
+                transports: ['websocket', 'polling'],
             });
             // socket.io 切断時の設定
             this.disconnectIo(ParentComponent.io);
