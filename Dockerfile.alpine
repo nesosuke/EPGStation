@@ -4,8 +4,13 @@ FROM ${arch}/node:14-alpine AS builder
 WORKDIR /app
 RUN apk add --no-cache g++ make pkgconf python
 COPY package*.json .
+<<<<<<< HEAD
 RUN npm ci
 COPY . .
+=======
+COPY . .
+RUN npm run all-install
+>>>>>>> 8415ad7eb93515c5bbb3e83c7bc72b52444efe34
 RUN npm run build
 
 

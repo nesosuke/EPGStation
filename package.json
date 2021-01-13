@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "EPGStation",
   "version": "1.7.6",
   "description": "DTV Software in Japan.",
@@ -100,4 +101,94 @@
     "webpack": "4.44.2",
     "webpack-stream": "6.1.0"
   }
+=======
+    "name": "epgstation",
+    "version": "2.0.3",
+    "description": "DTV Software in Japan.",
+    "main": "dist/server/index.js",
+    "scripts": {
+        "all-install": "npm i --no-save && cd client && npm i --no-save",
+        "start": "node dist/index.js",
+        "build": "gulp build && cd client && npm run build",
+        "build-server": "gulp build",
+        "build-client": "cd client && npm run build",
+        "watch": "gulp watch",
+        "clean": "gulp clean",
+        "orm-gen": "typeorm migration:generate -n ",
+        "backup": "node dist/DBTools.js -m backup -o",
+        "restore": "node dist/DBTools.js -m restore -o",
+        "v1migrate": "node dist/V1MigrationTool.js -i",
+        "install-win-service": "winser -i -a",
+        "uninstall-win-service": "winser -r -x",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/l3tnun/EPGStation-V2.git"
+    },
+    "author": "l3tnun",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/l3tnun/EPGStation-V2/issues"
+    },
+    "homepage": "https://github.com/l3tnun/EPGStation-V2#readme",
+    "dependencies": {
+        "aribts": "2.1.12",
+        "axios": "0.21.1",
+        "body-parser": "1.19.0",
+        "diskusage-ng": "1.0.0",
+        "express": "4.17.1",
+        "express-openapi": "7.0.2",
+        "file-type": "15.0.1",
+        "inversify": "5.0.1",
+        "js-yaml": "3.14.0",
+        "lodash": "4.17.20",
+        "log4js": "6.3.0",
+        "minimist": "1.2.5",
+        "mirakurun": "3.3.1",
+        "mkdirp": "1.0.4",
+        "multer": "1.4.2",
+        "mysql": "2.18.1",
+        "openapi-types": "7.0.1",
+        "reflect-metadata": "0.1.13",
+        "socket.io": "2.3.0",
+        "source-map-support": "0.5.19",
+        "sqlite3": "5.0.0",
+        "swagger-ui-dist": "3.35.1",
+        "typeorm": "0.2.28",
+        "url-join": "4.0.1"
+    },
+    "devDependencies": {
+        "@types/body-parser": "1.19.0",
+        "@types/express": "4.17.8",
+        "@types/file-type": "10.9.1",
+        "@types/js-yaml": "3.12.5",
+        "@types/lodash": "4.14.162",
+        "@types/minimist": "1.2.0",
+        "@types/mkdirp": "1.0.1",
+        "@types/mongodb": "3.5.27",
+        "@types/multer": "1.4.4",
+        "@types/node": "14.11.8",
+        "@types/socket.io": "2.1.11",
+        "@types/source-map-support": "0.5.3",
+        "@types/sqlite3": "3.1.6",
+        "@types/url-join": "4.0.0",
+        "@typescript-eslint/eslint-plugin": "4.4.0",
+        "@typescript-eslint/parser": "4.4.0",
+        "del": "6.0.0",
+        "eslint": "7.11.0",
+        "eslint-config-prettier": "6.12.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "gulp": "4.0.2",
+        "gulp-eslint": "6.0.0",
+        "gulp-plumber": "1.2.1",
+        "gulp-sourcemaps": "2.6.5",
+        "gulp-typescript": "5.0.1",
+        "i": "0.3.6",
+        "prettier": "2.1.2",
+        "ts-loader": "8.0.4",
+        "ts-node": "9.0.0",
+        "typescript": "4.0.3"
+    }
+>>>>>>> 8415ad7eb93515c5bbb3e83c7bc72b52444efe34
 }
